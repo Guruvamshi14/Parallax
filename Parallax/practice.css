@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+    /* child get 3D */
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transform-style: preserve-3d;
+    /* assigning 3D to each element */
+    height: 100vh;
+    z-index: -1;
+}
+
+.background,.foreground{
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.background{
+    transform: translateZ(-40px) scale(5);
+    height: 100%;
+    width: 100vw;
+}
+
+.foreground{
+    
+    transform: translateZ(-20px) translateX(10px) scale(3);
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    position: absolute;
+    top: 5rem;
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+   }
+
+section{
+    background-color: rgb(50, 6, 6);
+    color: aliceblue;
+}
+
+.sec_heading{
+    font-size: 4rem;
+    padding: 5rem 7rem 0rem 7rem;
+}
+
+p{
+    padding: 5rem 7rem;
+    font-size: 1.3rem;
+}
+
+.desc{
+    position: absolute;
+    /* text-align: center; */
+    background-color: white;
+    padding: 0.5rem 2.5rem ;
+    font-weight: 600;
+    font-size: 3.5rem;
+    color: black;
+    z-index: 5;
+}
+
+.bg{
+    position: relative;
+    width: 50vw;
+    height: 500px;
+    background-size: cover;
+    /* The background-size CSS property sets the size of the element's background image. The image can be left to its natural size, stretched, or constrained to fit the available space. */
+
+    background-position: center;
+    /* The background-position CSS property sets the initial position for each background image. The position is relative to the position layer set by background-origin. */
+
+    background-attachment: fixed;
+    /* The background-attachment CSS property sets whether a background image's position is fixed within the viewport, or scrolls with its containing block. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
